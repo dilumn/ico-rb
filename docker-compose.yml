@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  
+  app:
+    build: ./app
+    command: --rinkeby
+    volumes:
+      - $HOME/.rinkeby:/root
+      - ./app:/app
+    ports:
+      - '8545:8545'
+      - '30303:30303'
