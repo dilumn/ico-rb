@@ -13,14 +13,14 @@
 By default this is pointing to `rinkeby` ethereum test network. But if you want to run the main `ethereum` network remove `command: --rinkeby` line from `docker-compose.yml`
 
 
-* Login to the `geth` console of the container
+### Login to the `geth` console of the container ###
 
 `docker exec -it CONTAINERNAME geth attach ipc:/root/.ethereum/rinkeby/geth.ipc`
 
 If you are connecting to the main `ethereum` network, `docker exec -it CONTAINERNAME geth attach` will be enough
 
 
-* Login to the `bash` of the container
+### Login to the `bash` of the container ###
 
 `docker exec -it CONTAINERNAME bash`
 
