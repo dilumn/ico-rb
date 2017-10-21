@@ -1,13 +1,14 @@
 version: '2'
 
 services:
-  
   app:
     build: ./app
-    command: --rinkeby
+    command: --rinkeby --rpcapi "db,personal,eth,net,web3" --rpccorsdomain='*' --rpc --rpcaddr="0.0.0.0"
     volumes:
       - $HOME/.rinkeby:/root
       - ./app:/app
+      - ../elchapo:/elchapo
     ports:
-      - '8545:8545'
-      - '30303:30303'
+      - "30303:30303"
+      - "30303:30303/udp"
+      - "8545:8545"
