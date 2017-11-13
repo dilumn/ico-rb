@@ -12,3 +12,9 @@ services:
       - "30303:30303"
       - "30303:30303/udp"
       - "8545:8545"
+
+# https://docs.docker.com/compose/networking/#configuring-the-default-network, "Using a pre-existing network"
+networks:
+  default:
+    external:
+      name: bigapirb_default
